@@ -1,30 +1,41 @@
-recipieName = input("enter recipie name: ")
-thickness = input("Enter 20T or 30T: ")
-batchCount = int(input("batch count: "))
+print ("enter information...")
 
-def promptMaterial():
-    addMat = input("add material? y/n: ")
-    if addMat == "y":
-        newMaterial()
+batches = int(input("batch count: "))
 
+def addMat(batches):
+    material = list()
 
-def newMaterial():
-    matVendor = input("material vendor: ")  
-    matType = input("material type: ")
-    matSize = input("material size: ")
-    bagWeight = int(input("bag weight in kg: "))
-    mix1 = int(input("mix1: "))
-    mix2 = int(input("mix2: "))
-    mix3 = int(input("mix3: "))
-    mix4 = int(input("mix4: "))
-    mixBatch = mix1 + mix2 + mix3 + mix4
-    mixTotal = mixBatch * batchCount
-    bagCount = mixTotal / bagWeight
-    print(f"{bagCount} bags | {matVendor} {matType} {matSize} @ {bagWeight}kg | {mixBatch}kg/batch | Total:{mixTotal}kg")
-    
-    promptMaterial()
+    while True:
+        matVendor = input("vendor: ")
+        matType = input("material type: ")
+        matSize = input("material size: ")
+        bagWeight = int(input("bag weight: "))
+        mix1 = int(input("mix 1: "))
+        mix2 = int(input("mix 2: "))
+        mix3 = int(input("mix 3: "))
+        mix4 = int(input("mix 4: "))
+        mixBatch = mix1 + mix2 + mix3 + mix4
+        mixTotal = mixBatch * batches
+        bagCount = mixTotal / bagWeight
+        bagWeightStr = str(bagWeight)
+        mixBatchStr = str(mixBatch)
+        mixTotalStr = str(mixTotal)
+        bagCountStr = str(bagCount)
 
-promptMaterial()
+        materialInfo = [matVendor, matType, matSize, bagWeightStr, mixBatchStr, mixTotalStr, bagCountStr]
+        material.append(materialInfo)
 
+        if input("repeat? y/n: ") != "y":
+            break
 
+    for i in range(len(material)):
+        print(material[i])
+
+    print(materialInfo[1])
+
+addMat(batches)
+
+                
+
+        
 
