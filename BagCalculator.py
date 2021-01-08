@@ -29,9 +29,9 @@ def addMat(batches):
             break
 
     for i in range(len(material)):
-        print(material[i])
+        print(f"Material {i+1}: {materialInfo[6]} bags | {materialInfo[0]} | {materialInfo[1]} | {materialInfo[2]} | {materialInfo[3]}kg | {materialInfo[4]}kg/batch | Total: {materialInfo[5]}")
 
-    print(materialInfo[1])
+
 
 addMat(batches)
 
