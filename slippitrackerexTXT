@@ -1,0 +1,54 @@
+Game(
+    end=End(
+        lras_initiator=None,
+        method=2:GAME),
+    frames=[...](9930),
+    metadata=Metadata(
+        console_name=None,
+        date=2021-01-01 17:30:20+00:00,
+        duration=9930,
+        platform='dolphin':DOLPHIN,
+        players=(
+            Player(
+                characters={18:MARTH: 10626},
+                netplay=Netplay(
+                    code=SORA#426,
+                    name=sora)),
+            Player(
+                characters={9:PEACH: 10626},
+                netplay=Netplay(
+                    code=WBOB#342,
+                    name=weebob)),
+            None,
+            None)),
+    start=Start(
+        is_frozen_ps=False,
+        is_pal=False,
+        is_teams=False,
+        players=(
+            Player(
+                character=9:MARTH,
+                costume=0,
+                stocks=4,
+                tag=,
+                team=None,
+                type=0:HUMAN,
+                ucf=UCF(
+                    dash_back=1:UCF,
+                    shield_drop=1:UCF)),
+            Player(
+                character=12:PEACH,
+                costume=2,
+                stocks=4,
+                tag=,
+                team=None,
+                type=0:HUMAN,
+                ucf=UCF(
+                    dash_back=1:UCF,
+                    shield_drop=1:UCF)),
+            None,
+            None),
+        random_seed=57211,
+        slippi=Slippi(
+            version=3.7.0),
+        stage=8:YOSHIS_STORY))
